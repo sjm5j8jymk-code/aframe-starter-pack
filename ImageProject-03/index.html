@@ -1,25 +1,84 @@
+
+
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
   </head>
+
   <body>
     <a-scene>
-       <a-assets>
-        <a-asset-item id="butterfly" src="Assets/butterfly3.obj"></a-asset-item>
-        <a-asset-item id="butterfly2" src="Assets/_butterfly2.obj"></a-asset-item>
-        
 
-        <img id="tex2" src="Assets/butterfly2texture.bmp">
-        <img id="tex3" src="Assets/butterfly3texture.jpg">
-        <img id="moon" src="Assets/moon.jpg">
+      <a-assets>
+        <!-- 3D Models -->
+        <a-asset-item
+          id="butterfly"
+          src="Assets/Butterfly_OBJ/butterfly3.obj">
+        </a-asset-item>
+
+        <a-asset-item
+          id="butterfly2"
+          src="Assets/Butterfly_OBJ/_butterfly2.obj">
+        </a-asset-item>
+
+        <!-- Textures -->
+        <img
+          id="room"
+          src="Assets/Butterfly_OBJ/Screenshot 2026-05-20 at 10.22.45 PM.png">
+
+        <img
+          id="tex2"
+          src="Assets/Butterfly_OBJ/butterflytexture2.bmp">
+
+        <img
+          id="tex3"
+          src="Assets/Butterfly_OBJ/butterfly3texture.jpeg">
+
+        <img
+          id="moon"
+          src="Assets/Butterfly_OBJ/moon.jpg">
       </a-assets>
 
-      <a-obj-model src="#butterfly" position="0 0 -5" color="pink" material="src: #tex3"></a-obj-model>
-      <a-obj-model src="#butterfly2" position="0 0 -5" scale="0.01 0.01 0.01" material="src: #tex2"></a-obj-model>
-      <a-sphere material="src: #moon" position="0 4.5 -5" radius=".7"></a-sphere>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+
+      <!-- 360 Background -->
+      <a-sky src="#room"></a-sky>
+
+
+      <!-- Butterfly 1 -->
+      <a-obj-model
+        src="#butterfly"
+        position="-1 0 -5"
+        scale="0.01 0.01 0.01"
+        material="src: #tex3">
+      </a-obj-model>
+
+
+      <!-- Butterfly 2 -->
+      <a-obj-model
+        src="#butterfly2"
+        position="3 2 -5"
+        scale="0.01 0.01 0.01"
+        material="src: #tex2">
+      </a-obj-model>
+
+
+      <!-- Moon Sphere -->
+      <a-sphere
+        position="-7 9 -5"
+        radius="1"
+        material="src: #moon">
+      </a-sphere>
+
+
+      <!-- Ground -->
+      <!-- <a-plane -->
+        position="0 -10 -4"
+        rotation="-90 0 0"
+        width="400"
+        height="400"
+        color="green">
+      </a-plane>
+
     </a-scene>
   </body>
 </html>
