@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,76 +7,95 @@
   <body>
     <a-scene>
 
+      <!-- Assets -->
       <a-assets>
-        <!-- 3D Models -->
+
+        <!-- Butterfly Models -->
         <a-asset-item
           id="butterfly"
+          src="Assets/Butterfly_OBJ/_butterfly2.obj">
+        </a-asset-item>
+
+        <a-asset-item
+          id="butterfly3"
           src="Assets/Butterfly_OBJ/butterfly3.obj">
         </a-asset-item>
 
         <a-asset-item
-          id="butterfly2"
-          src="Assets/Butterfly_OBJ/_butterfly2.obj">
+          id="kitty"
+          src="Assets/Butterfly_OBJ/12221_Cat_v1_l3.obj">
         </a-asset-item>
 
         <!-- Textures -->
         <img
-          id="room"
-          src="Assets/Butterfly_OBJ/Screenshot 2026-05-20 at 10.22.45 PM.png">
-
-        <img
           id="tex2"
-          src="Assets/Butterfly_OBJ/butterflytexture2.bmp">
+          src="Assets/Butterfly_OBJ/butterflywingblue.jpg">
 
         <img
           id="tex3"
           src="Assets/Butterfly_OBJ/butterfly3texture.jpeg">
 
+      <img
+          id="catfur"
+          src="Assets/Butterfly_OBJ/Cat_diffuse.jpg">
+
+
+        <!-- Moon Texture -->
         <img
           id="moon"
           src="Assets/Butterfly_OBJ/moon.jpg">
+
+        <!-- Room Background -->
+        <img
+          id="room"
+          src="Assets/Butterfly_OBJ/roomready.png">
+
       </a-assets>
 
 
-      <!-- 360 Background -->
+      <!-- Sky / Room -->
       <a-sky src="#room"></a-sky>
 
-
-      <!-- Butterfly 1 -->
+      <!-- Butterfly 2 -->
       <a-obj-model
-        src="#butterfly"
-        position="-1 0 -5"
-        scale="0.01 0.01 0.01"
-        material="src: #tex3">
+        src="#butterfly3"
+        position="-9 -1 13"
+        rotation="0 40 0"
+        scale="0.07 0.07 0.07"
+        color="pink"
+>
       </a-obj-model>
 
 
       <!-- Butterfly 2 -->
       <a-obj-model
-        src="#butterfly2"
-        position="3 2 -5"
-        scale="0.01 0.01 0.01"
+        src="#butterfly3"
+        position="-15 -5 10"
+        rotation="15 15 40"
+        scale="0.09 0.09 0.09"
         material="src: #tex2">
+      >
       </a-obj-model>
 
+      <!-- Kitty -->
+<a-obj-model
+    src="#kitty"
+    position="-20 -20 0"
+    rotation="270 45 0"
+    scale="0.3 0.3 0.3"
+    material="src: #catfur">
+</a-obj-model>
 
-      <!-- Moon Sphere -->
+
+      <!-- Moon -->
       <a-sphere
-        position="-7 9 -5"
-        radius="1"
+        position="-20 -20 -25"
+        radius="10"
         material="src: #moon">
       </a-sphere>
 
 
-      <!-- Ground -->
-      <!-- <a-plane -->
-        position="0 -10 -4"
-        rotation="-90 0 0"
-        width="400"
-        height="400"
-        color="green">
-      </a-plane>
-
+     
     </a-scene>
   </body>
 </html>
