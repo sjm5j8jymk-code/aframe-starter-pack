@@ -7,10 +7,9 @@
   <body>
     <a-scene>
 
-      <!-- Assets -->
       <a-assets>
 
-        <!-- Butterfly Models -->
+        
         <a-asset-item
           id="butterfly"
           src="Assets/Butterfly_OBJ/_butterfly2.obj">
@@ -26,7 +25,7 @@
           src="Assets/Butterfly_OBJ/12221_Cat_v1_l3.obj">
         </a-asset-item>
 
-        <!-- Textures -->
+       
         <img
           id="tex2"
           src="Assets/Butterfly_OBJ/butterflywingblue.jpg">
@@ -40,23 +39,19 @@
           src="Assets/Butterfly_OBJ/Cat_diffuse.jpg">
 
 
-        <!-- Moon Texture -->
         <img
           id="moon"
           src="Assets/Butterfly_OBJ/moon.jpg">
 
-        <!-- Room Background -->
+   
         <img
           id="room"
-          src="Assets/Butterfly_OBJ/roomready.png">
+          src="Assets/Butterfly_OBJ/Screenshot 2026-05-21 at 2.37.13 PM.png">
 
       </a-assets>
 
 
-      <!-- Sky / Room -->
       <a-sky src="#room"></a-sky>
-
-      <!-- Butterfly 2 -->
       <a-obj-model
         src="#butterfly3"
         position="-9 -1 13"
@@ -66,8 +61,6 @@
 >
       </a-obj-model>
 
-
-      <!-- Butterfly 2 -->
       <a-obj-model
         src="#butterfly3"
         position="-15 -5 10"
@@ -76,8 +69,6 @@
         material="src: #tex2">
       >
       </a-obj-model>
-
-      <!-- Kitty -->
 <a-obj-model
     src="#kitty"
     position="-20 -20 0"
@@ -87,7 +78,6 @@
 </a-obj-model>
 
 
-      <!-- Moon -->
       <a-sphere
         position="-25 30 90"
         radius="20"
